@@ -22,7 +22,7 @@ PROFILE_DIR = os.path.join(os.path.dirname(__file__), "visa_profile")
 APPOINTMENT_URL = "https://www.usvisascheduling.com/zh-CN/schedule/?reschedule=true"
 
 # URL that our in-page hook will ping when it detects available slots
-NOTIFY_URL = "https://api.telegram.org/bot<YOUR_BOT_TOKEN>/sendMessage?chat_id=<YOUR_CHAT_ID>&text=hasSlot"
+NOTIFY_URL = "https://api.telegram.org/bot8204907393:AAHQHHlaK87cHKYhgEK_p9f47vEZllTxcmI/sendMessage?chat_id=8034610336&text=hasSlot"
 
 # Global retry configuration
 MAX_RETRIES = 5
@@ -261,7 +261,7 @@ async def _solve_captcha_with_openai(data_url: str) -> str | None:
     for attempt in range(MAX_RETRIES):
         try:
             response = openai.chat.completions.create(
-                model="gpt-4o-mini",
+                model="gpt-5-mini",
                 messages=[
                     {
                         "role": "user",
